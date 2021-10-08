@@ -23,7 +23,7 @@ jobs:
       - run: yarn
       - run: chmod u+x version-up.sh
       - name: replace version
-        run: export v=$(git describe --tags) && ./version-up.sh
+        run: export v=0.0.1
       - name: generate
         run: make gen-node
       - run: |
