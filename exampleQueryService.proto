@@ -1,0 +1,15 @@
+syntax = "proto3";
+package user;
+option go_package="github.com/softia-inc/nowin-definition;user";
+
+service helloQueryService {
+  rpc hello(helloRequest) returns (helloResponse) {}
+}
+
+message helloRequest{
+  string userName = 1;
+}
+
+message helloResponse {
+  string message = 1;
+}
