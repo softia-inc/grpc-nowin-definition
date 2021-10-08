@@ -1,0 +1,19 @@
+name: CI
+
+on:
+  push:
+jobs:
+  go-build:
+    runs-on: ubuntu-latest
+    container: golang:1.14-buster
+    steps:
+      - uses: actions/checkout@v2
+      - run: apt update
+      - run: apt install -y unzip clang-format
+      - run: wget https://github.com/protocolbuffers/protobuf/releases/download/v3.11.3/protoc-3.11.3-linux-x86_64.zip
+      - run: unzip protoc-3.11.3-linux-x86_64.zip -d protoc3
+      - run: mv protoc3/bin/* /usr/local/bin/
+      - run: mv protoc3/include/* /usr/local/include/
+      - run: go get google.golang.org/grpc
+      - run: go get github.com/golang/protobuf/protoc-gen-go
+      - run: make generate
