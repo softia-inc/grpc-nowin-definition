@@ -1,0 +1,14 @@
+syntax = "proto3";
+package nowin;
+option go_package="github.com/softia-inc/nowin-definition;nowin";
+
+service CompanyCommandService {
+  rpc Create(CompanyCommandCreateRequest) returns (CompanyCommandCreateResponse) {}
+}
+message CompanyCommandCreateRequest{
+  string companyName = 1;
+  string homePageURL = 2;
+  string address = 3;
+  string email = 4;
+}
+message CompanyCommandCreateResponse {}

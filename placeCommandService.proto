@@ -1,0 +1,18 @@
+syntax = "proto3";
+package nowin;
+option go_package="github.com/softia-inc/nowin-definition;nowin";
+
+service PlaceCommandService {
+  rpc Create(PlaceCommandCreateRequest) returns (PlaceCommandCreateResponse) {}
+}
+message PlaceCommandCreateRequest{
+  string companyUUID = 1;
+  string placeName = 2;
+  string telephoneNUmber = 3;
+  string checkInAt = 4;
+  int64 checkOutAt = 5;
+  string address = 6;
+  string email = 7;
+  string introduction = 8;
+}
+message PlaceCommandCreateResponse {}
