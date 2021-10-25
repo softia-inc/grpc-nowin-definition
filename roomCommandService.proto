@@ -1,0 +1,20 @@
+syntax = "proto3";
+package nowin;
+option go_package="github.com/softia-inc/nowin-definition;nowin";
+
+service RoomCommandService {
+  rpc Create(RoomCommandCreateRequest) returns (RoomCommandCreateResponse) {}
+}
+message RoomCommandCreateRequest{
+  string companyUUID = 1;
+  string placeUUID = 2;
+  string roomTypeName = 3;
+  string ableStayNumber = 4;
+  repeated StayAbleInfo stayAbleInfo = 5;
+  repeated string amenityUUIDs = 6;
+  message StayAbleInfo{
+    string number = 1;
+    string amount = 2;
+  }
+}
+message RoomCommandCreateResponse {}
