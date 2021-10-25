@@ -4,13 +4,13 @@ option go_package="github.com/softia-inc/nowin-definition;nowin";
 import "google/protobuf/timestamp.proto";
 
 service AuthorizationCommandService {
-  rpc LoginAdmin(AuthorizationCommandLoginAdminRequest) returns (AuthorizationCommandLoginAdminResponse) {}
+  rpc LoginCompanyUser(AuthorizationCommandLoginCompanyUserRequest) returns (AuthorizationCommandLoginCompanyUserResponse) {}
 }
-message AuthorizationCommandLoginAdminRequest{
+message AuthorizationCommandLoginCompanyUserRequest{
   string email = 1;
   string password = 2;
 }
-message AuthorizationCommandLoginAdminResponse {
+message AuthorizationCommandLoginCompanyUserResponse {
   string jwtToken = 1;
   string userUUID = 2;
   string lastName = 3;
