@@ -6,13 +6,12 @@ service PlaceCommandService {
   rpc Create(PlaceCommandCreateRequest) returns (PlaceCommandCreateResponse) {}
 }
 message PlaceCommandCreateRequest{
-  string companyUUID = 1;
-  string placeName = 2;
-  string telephoneNUmber = 3;
-  string checkInAt = 4;
-  int64 checkOutAt = 5;
-  string address = 6;
-  string email = 7;
-  string introduction = 8;
+  string placeName = 1;
+  string telephoneNUmber = 2;
+  string checkInAt = 3;
+  int64 checkOutAt = 4;
+  string address = 5;
+  string email = 6;
+  string introduction = 7;
 }
 message PlaceCommandCreateResponse {}
