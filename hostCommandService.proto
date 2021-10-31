@@ -8,14 +8,18 @@ service HostGroupCommandService {
   rpc Delete(HostGroupCommandDeleteRequest) returns (HostGroupCommandDeleteResponse) {}
 }
 message HostGroupCommandCreateRequest{
-  string hostGroupName = 1;
-  string address = 2;
-  string email = 3;
-  string telephoneNumber1 = 4;
-  string telephoneNumber2 = 5;
-  string telephoneNumber3 = 6;
-  bool isEnterprise = 7;
-  string homePageURL = 8;
+  string address = 1;
+  string email = 2;
+  string firstName = 3;
+  string lastName = 4;
+  string password = 5;
+  string telephoneNumber1 = 6;
+  string telephoneNumber2 = 7;
+  string telephoneNumber3 = 8;
+  bool isEnterprise = 9;
+  // options
+  string hostGroupName = 10;
+  string homePageURL = 11;
 }
 message HostGroupCommandCreateResponse {
   string hostGroupUUID = 1;
