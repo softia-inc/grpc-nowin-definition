@@ -1,0 +1,18 @@
+syntax = "proto3";
+package nowin;
+option go_package="github.com/softia-inc/nowin-definition;nowin";
+
+service HostGroupCommandService {
+  rpc Create(HostGroupCommandCreateRequest) returns (HostGroupCommandCreateResponse) {}
+}
+message HostGroupCommandCreateRequest{
+  string hostGroupName = 1;
+  string address = 2;
+  string email = 3;
+  string telephoneNumber = 4;
+  bool isEnterprise = 5;
+  bool homePageURL = 6;
+}
+message HostGroupCommandCreateResponse {
+  string hostGroupUUID = 1;
+}

@@ -4,13 +4,13 @@ option go_package="github.com/softia-inc/nowin-definition;nowin";
 import "google/protobuf/timestamp.proto";
 
 service AuthorizationCommandService {
-  rpc AuthorizeLendingGroupUser(AuthorizationCommandAuthorizeLendingGroupUserRequest) returns (AuthorizationCommandAuthorizeLendingGroupUserResponse) {}
+  rpc AuthorizeHostGroupUser(AuthorizationCommandAuthorizeHostGroupUserRequest) returns (AuthorizationCommandAuthorizeHostGroupUserResponse) {}
 }
-message AuthorizationCommandAuthorizeLendingGroupUserRequest{
+message AuthorizationCommandAuthorizeHostGroupUserRequest{
   string email = 1;
   string password = 2;
 }
-message AuthorizationCommandAuthorizeLendingGroupUserResponse {
+message AuthorizationCommandAuthorizeHostGroupUserResponse {
   string jwtToken = 1;
   string userUUID = 2;
   string lastName = 3;
