@@ -9,9 +9,9 @@ message HostGroupCommandCreateRequest{
   string hostGroupName = 1;
   string address = 2;
   string email = 3;
-  int32 telephoneNumber1 = 4;
-  int32 telephoneNumber2 = 5;
-  int32 telephoneNumber3 = 6;
+  string telephoneNumber1 = 4;
+  string telephoneNumber2 = 5;
+  string telephoneNumber3 = 6;
   bool isEnterprise = 7;
   string homePageURL = 8;
 }
