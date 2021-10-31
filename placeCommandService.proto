@@ -7,11 +7,13 @@ service PlaceCommandService {
 }
 message PlaceCommandCreateRequest{
   string placeName = 1;
-  string telephoneNUmber = 2;
-  string checkInAt = 3;
-  int64 checkOutAt = 4;
-  string address = 5;
-  string email = 6;
-  string introduction = 7;
+  string telephoneNumber1 = 2;
+  string telephoneNumber2 = 3;
+  string telephoneNumber3 = 4;
+  string checkInAt = 5;
+  int64 checkOutAt = 6;
+  string address = 7;
+  string email = 8;
+  string introduction = 9;
 }
 message PlaceCommandCreateResponse {}
