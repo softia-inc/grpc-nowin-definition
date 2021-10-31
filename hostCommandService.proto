@@ -2,12 +2,12 @@ syntax = "proto3";
 package nowin;
 option go_package="github.com/softia-inc/nowin-definition;nowin";
 
-service HostGroupCommandService {
-  rpc Create(HostGroupCommandCreateRequest) returns (HostGroupCommandCreateResponse) {}
-  rpc Update(HostGroupCommandUpdateRequest) returns (HostGroupCommandUpdateResponse) {}
-  rpc Delete(HostGroupCommandDeleteRequest) returns (HostGroupCommandDeleteResponse) {}
+service HostCommandService {
+  rpc Create(HostCommandCreateRequest) returns (HostCommandCreateResponse) {}
+  rpc Update(HostCommandUpdateRequest) returns (HostCommandUpdateResponse) {}
+  rpc Delete(HostCommandUpdateRequest) returns (HostCommandUpdateResponse) {}
 }
-message HostGroupCommandCreateRequest{
+message HostCommandCreateRequest{
   string address = 1;
   string email = 2;
   string firstName = 3;
@@ -21,23 +21,29 @@ message HostGroupCommandCreateRequest{
   string hostGroupName = 10;
   string homePageURL = 11;
 }
-message HostGroupCommandCreateResponse {
-  string hostGroupUUID = 1;
+message HostCommandCreateResponse {
+  string hostUUID = 1;
 }
-message HostGroupCommandUpdateRequest{
-  string hostGroupUUID = 1;
-  string hostGroupName = 2;
-  string address = 3;
-  string email = 4;
-  string telephoneNumber1 = 5;
-  string telephoneNumber2 = 6;
-  string telephoneNumber3 = 7;
-  bool isEnterprise = 8;
-  string homePageURL = 9;
+message HostCommandUpdateRequest{
+  string hostUUID = 1;
+  string address = 2;
+  string email = 3;
+  string firstName = 4;
+  string lastName = 5;
+  string password = 6;
+  string telephoneNumber1 = 7;
+  string telephoneNumber2 = 8;
+  string telephoneNumber3 = 9;
+  bool isEnterprise = 10;
+  // options
+  string hostGroupName = 11;
+  string homePageURL = 12;
 }
-message HostGroupCommandUpdateResponse {
+message HostCommandUpdateResponse {
+  string hostUUID = 1;
 }
-message HostGroupCommandDeleteRequest{
-  string hostGroupUUID = 1;
+message HostCommandDeleteRequest{
+  string hostUUID = 1;
 }
-message HostGroupCommandDeleteResponse {}
+message HostCommandDeleteResponse {
+}
