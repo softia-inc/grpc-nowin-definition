@@ -11,7 +11,7 @@ message HostGroupCommandCreateRequest{
   string email = 3;
   string telephoneNumber = 4;
   bool isEnterprise = 5;
-  bool homePageURL = 6;
+  string homePageURL = 6;
 }
 message HostGroupCommandCreateResponse {
   string hostGroupUUID = 1;
