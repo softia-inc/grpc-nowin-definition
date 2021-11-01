@@ -3,12 +3,13 @@ package nowin;
 option go_package="github.com/softia-inc/nowin-definition;nowin";
 
 service HostCommandService {
+  rpc CreateFirstHost(HostGroupCommandCreateFirstHostRequest) returns (HostGroupCommandCreateFirstHostResponse) {}
   rpc Create(HostCommandCreateRequest) returns (HostCommandCreateResponse) {}
   rpc Update(HostCommandUpdateRequest) returns (HostCommandUpdateResponse) {}
-  rpc Delete(HostCommandUpdateRequest) returns (HostCommandUpdateResponse) {}
+  rpc Delete(HostCommandDeleteRequest) returns (HostCommandDeleteResponse) {}
 }
-message HostCommandCreateRequest{
-  string address = 1;
+message HostGroupCommandCreateFirstHostRequest{
+  string hostGroupUUID = 1;
   string email = 2;
   string firstName = 3;
   string lastName = 4;
@@ -16,34 +17,32 @@ message HostCommandCreateRequest{
   string telephoneNumber1 = 6;
   string telephoneNumber2 = 7;
   string telephoneNumber3 = 8;
-  bool isEnterprise = 9;
-  // options
-  string hostGroupName = 10;
-  string homePageURL = 11;
+}
+message HostGroupCommandCreateFirstHostResponse{}
+
+message HostCommandCreateRequest{
+  string email = 1;
+  string firstName = 2;
+  string lastName = 3;
+  string password = 4;
+  string telephoneNumber1 = 5;
+  string telephoneNumber2 = 6;
+  string telephoneNumber3 = 7;
 }
 message HostCommandCreateResponse {
-  string hostUUID = 1;
 }
 message HostCommandUpdateRequest{
   string hostUUID = 1;
-  string address = 2;
-  string email = 3;
-  string firstName = 4;
-  string lastName = 5;
-  string password = 6;
-  string telephoneNumber1 = 7;
-  string telephoneNumber2 = 8;
-  string telephoneNumber3 = 9;
-  bool isEnterprise = 10;
-  // options
-  string hostGroupName = 11;
-  string homePageURL = 12;
+  string email = 2;
+  string firstName = 3;
+  string lastName = 4;
+  string password = 5;
+  string telephoneNumber1 = 6;
+  string telephoneNumber2 = 7;
+  string telephoneNumber3 = 8;
 }
-message HostCommandUpdateResponse {
-  string hostUUID = 1;
-}
+message HostCommandUpdateResponse {}
 message HostCommandDeleteRequest{
   string hostUUID = 1;
 }
-message HostCommandDeleteResponse {
-}
+message HostCommandDeleteResponse {}
