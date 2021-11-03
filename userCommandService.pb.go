@@ -2,7 +2,7 @@
 // versions:
 // 	protoc-gen-go v1.27.1
 // 	protoc        v3.17.3
-// source: hostCommandService.proto
+// source: userCommandService.proto
 
 package nowin
 
@@ -38,7 +38,7 @@ type UserCommandCreateRequest struct {
 func (x *UserCommandCreateRequest) Reset() {
 	*x = UserCommandCreateRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_hostCommandService_proto_msgTypes[0]
+		mi := &file_userCommandService_proto_msgTypes[0]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -51,7 +51,7 @@ func (x *UserCommandCreateRequest) String() string {
 func (*UserCommandCreateRequest) ProtoMessage() {}
 
 func (x *UserCommandCreateRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_hostCommandService_proto_msgTypes[0]
+	mi := &file_userCommandService_proto_msgTypes[0]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -64,7 +64,7 @@ func (x *UserCommandCreateRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use UserCommandCreateRequest.ProtoReflect.Descriptor instead.
 func (*UserCommandCreateRequest) Descriptor() ([]byte, []int) {
-	return file_hostCommandService_proto_rawDescGZIP(), []int{0}
+	return file_userCommandService_proto_rawDescGZIP(), []int{0}
 }
 
 func (x *UserCommandCreateRequest) GetEmail() string {
@@ -106,7 +106,7 @@ type UserCommandCreateResponse struct {
 func (x *UserCommandCreateResponse) Reset() {
 	*x = UserCommandCreateResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_hostCommandService_proto_msgTypes[1]
+		mi := &file_userCommandService_proto_msgTypes[1]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -119,7 +119,7 @@ func (x *UserCommandCreateResponse) String() string {
 func (*UserCommandCreateResponse) ProtoMessage() {}
 
 func (x *UserCommandCreateResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_hostCommandService_proto_msgTypes[1]
+	mi := &file_userCommandService_proto_msgTypes[1]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -132,7 +132,7 @@ func (x *UserCommandCreateResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use UserCommandCreateResponse.ProtoReflect.Descriptor instead.
 func (*UserCommandCreateResponse) Descriptor() ([]byte, []int) {
-	return file_hostCommandService_proto_rawDescGZIP(), []int{1}
+	return file_userCommandService_proto_rawDescGZIP(), []int{1}
 }
 
 func (x *UserCommandCreateResponse) GetToken() string {
@@ -157,7 +157,7 @@ type UserCommandUpdateRequest struct {
 func (x *UserCommandUpdateRequest) Reset() {
 	*x = UserCommandUpdateRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_hostCommandService_proto_msgTypes[2]
+		mi := &file_userCommandService_proto_msgTypes[2]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -170,7 +170,7 @@ func (x *UserCommandUpdateRequest) String() string {
 func (*UserCommandUpdateRequest) ProtoMessage() {}
 
 func (x *UserCommandUpdateRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_hostCommandService_proto_msgTypes[2]
+	mi := &file_userCommandService_proto_msgTypes[2]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -183,7 +183,7 @@ func (x *UserCommandUpdateRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use UserCommandUpdateRequest.ProtoReflect.Descriptor instead.
 func (*UserCommandUpdateRequest) Descriptor() ([]byte, []int) {
-	return file_hostCommandService_proto_rawDescGZIP(), []int{2}
+	return file_userCommandService_proto_rawDescGZIP(), []int{2}
 }
 
 func (x *UserCommandUpdateRequest) GetUserUUID() string {
@@ -230,7 +230,7 @@ type UserCommandUpdateResponse struct {
 func (x *UserCommandUpdateResponse) Reset() {
 	*x = UserCommandUpdateResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_hostCommandService_proto_msgTypes[3]
+		mi := &file_userCommandService_proto_msgTypes[3]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -243,7 +243,7 @@ func (x *UserCommandUpdateResponse) String() string {
 func (*UserCommandUpdateResponse) ProtoMessage() {}
 
 func (x *UserCommandUpdateResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_hostCommandService_proto_msgTypes[3]
+	mi := &file_userCommandService_proto_msgTypes[3]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -256,7 +256,7 @@ func (x *UserCommandUpdateResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use UserCommandUpdateResponse.ProtoReflect.Descriptor instead.
 func (*UserCommandUpdateResponse) Descriptor() ([]byte, []int) {
-	return file_hostCommandService_proto_rawDescGZIP(), []int{3}
+	return file_userCommandService_proto_rawDescGZIP(), []int{3}
 }
 
 type UserCommandDeleteRequest struct {
@@ -270,7 +270,7 @@ type UserCommandDeleteRequest struct {
 func (x *UserCommandDeleteRequest) Reset() {
 	*x = UserCommandDeleteRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_hostCommandService_proto_msgTypes[4]
+		mi := &file_userCommandService_proto_msgTypes[4]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -283,7 +283,7 @@ func (x *UserCommandDeleteRequest) String() string {
 func (*UserCommandDeleteRequest) ProtoMessage() {}
 
 func (x *UserCommandDeleteRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_hostCommandService_proto_msgTypes[4]
+	mi := &file_userCommandService_proto_msgTypes[4]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -296,7 +296,7 @@ func (x *UserCommandDeleteRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use UserCommandDeleteRequest.ProtoReflect.Descriptor instead.
 func (*UserCommandDeleteRequest) Descriptor() ([]byte, []int) {
-	return file_hostCommandService_proto_rawDescGZIP(), []int{4}
+	return file_userCommandService_proto_rawDescGZIP(), []int{4}
 }
 
 func (x *UserCommandDeleteRequest) GetUserUUID() string {
@@ -315,7 +315,7 @@ type UserCommandDeleteResponse struct {
 func (x *UserCommandDeleteResponse) Reset() {
 	*x = UserCommandDeleteResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_hostCommandService_proto_msgTypes[5]
+		mi := &file_userCommandService_proto_msgTypes[5]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -328,7 +328,7 @@ func (x *UserCommandDeleteResponse) String() string {
 func (*UserCommandDeleteResponse) ProtoMessage() {}
 
 func (x *UserCommandDeleteResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_hostCommandService_proto_msgTypes[5]
+	mi := &file_userCommandService_proto_msgTypes[5]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -341,13 +341,13 @@ func (x *UserCommandDeleteResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use UserCommandDeleteResponse.ProtoReflect.Descriptor instead.
 func (*UserCommandDeleteResponse) Descriptor() ([]byte, []int) {
-	return file_hostCommandService_proto_rawDescGZIP(), []int{5}
+	return file_userCommandService_proto_rawDescGZIP(), []int{5}
 }
 
-var File_hostCommandService_proto protoreflect.FileDescriptor
+var File_userCommandService_proto protoreflect.FileDescriptor
 
-var file_hostCommandService_proto_rawDesc = []byte{
-	0x0a, 0x18, 0x68, 0x6f, 0x73, 0x74, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x53, 0x65, 0x72,
+var file_userCommandService_proto_rawDesc = []byte{
+	0x0a, 0x18, 0x75, 0x73, 0x65, 0x72, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x53, 0x65, 0x72,
 	0x76, 0x69, 0x63, 0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x12, 0x05, 0x6e, 0x6f, 0x77, 0x69,
 	0x6e, 0x22, 0x86, 0x01, 0x0a, 0x18, 0x55, 0x73, 0x65, 0x72, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e,
 	0x64, 0x43, 0x72, 0x65, 0x61, 0x74, 0x65, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x14,
@@ -401,19 +401,19 @@ var file_hostCommandService_proto_rawDesc = []byte{
 }
 
 var (
-	file_hostCommandService_proto_rawDescOnce sync.Once
-	file_hostCommandService_proto_rawDescData = file_hostCommandService_proto_rawDesc
+	file_userCommandService_proto_rawDescOnce sync.Once
+	file_userCommandService_proto_rawDescData = file_userCommandService_proto_rawDesc
 )
 
-func file_hostCommandService_proto_rawDescGZIP() []byte {
-	file_hostCommandService_proto_rawDescOnce.Do(func() {
-		file_hostCommandService_proto_rawDescData = protoimpl.X.CompressGZIP(file_hostCommandService_proto_rawDescData)
+func file_userCommandService_proto_rawDescGZIP() []byte {
+	file_userCommandService_proto_rawDescOnce.Do(func() {
+		file_userCommandService_proto_rawDescData = protoimpl.X.CompressGZIP(file_userCommandService_proto_rawDescData)
 	})
-	return file_hostCommandService_proto_rawDescData
+	return file_userCommandService_proto_rawDescData
 }
 
-var file_hostCommandService_proto_msgTypes = make([]protoimpl.MessageInfo, 6)
-var file_hostCommandService_proto_goTypes = []interface{}{
+var file_userCommandService_proto_msgTypes = make([]protoimpl.MessageInfo, 6)
+var file_userCommandService_proto_goTypes = []interface{}{
 	(*UserCommandCreateRequest)(nil),  // 0: nowin.UserCommandCreateRequest
 	(*UserCommandCreateResponse)(nil), // 1: nowin.UserCommandCreateResponse
 	(*UserCommandUpdateRequest)(nil),  // 2: nowin.UserCommandUpdateRequest
@@ -421,7 +421,7 @@ var file_hostCommandService_proto_goTypes = []interface{}{
 	(*UserCommandDeleteRequest)(nil),  // 4: nowin.UserCommandDeleteRequest
 	(*UserCommandDeleteResponse)(nil), // 5: nowin.UserCommandDeleteResponse
 }
-var file_hostCommandService_proto_depIdxs = []int32{
+var file_userCommandService_proto_depIdxs = []int32{
 	0, // 0: nowin.UserCommandService.Create:input_type -> nowin.UserCommandCreateRequest
 	2, // 1: nowin.UserCommandService.Update:input_type -> nowin.UserCommandUpdateRequest
 	4, // 2: nowin.UserCommandService.Delete:input_type -> nowin.UserCommandDeleteRequest
@@ -435,13 +435,13 @@ var file_hostCommandService_proto_depIdxs = []int32{
 	0, // [0:0] is the sub-list for field type_name
 }
 
-func init() { file_hostCommandService_proto_init() }
-func file_hostCommandService_proto_init() {
-	if File_hostCommandService_proto != nil {
+func init() { file_userCommandService_proto_init() }
+func file_userCommandService_proto_init() {
+	if File_userCommandService_proto != nil {
 		return
 	}
 	if !protoimpl.UnsafeEnabled {
-		file_hostCommandService_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
+		file_userCommandService_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*UserCommandCreateRequest); i {
 			case 0:
 				return &v.state
@@ -453,7 +453,7 @@ func file_hostCommandService_proto_init() {
 				return nil
 			}
 		}
-		file_hostCommandService_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
+		file_userCommandService_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*UserCommandCreateResponse); i {
 			case 0:
 				return &v.state
@@ -465,7 +465,7 @@ func file_hostCommandService_proto_init() {
 				return nil
 			}
 		}
-		file_hostCommandService_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
+		file_userCommandService_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*UserCommandUpdateRequest); i {
 			case 0:
 				return &v.state
@@ -477,7 +477,7 @@ func file_hostCommandService_proto_init() {
 				return nil
 			}
 		}
-		file_hostCommandService_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
+		file_userCommandService_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*UserCommandUpdateResponse); i {
 			case 0:
 				return &v.state
@@ -489,7 +489,7 @@ func file_hostCommandService_proto_init() {
 				return nil
 			}
 		}
-		file_hostCommandService_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
+		file_userCommandService_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*UserCommandDeleteRequest); i {
 			case 0:
 				return &v.state
@@ -501,7 +501,7 @@ func file_hostCommandService_proto_init() {
 				return nil
 			}
 		}
-		file_hostCommandService_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
+		file_userCommandService_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*UserCommandDeleteResponse); i {
 			case 0:
 				return &v.state
@@ -518,20 +518,20 @@ func file_hostCommandService_proto_init() {
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: file_hostCommandService_proto_rawDesc,
+			RawDescriptor: file_userCommandService_proto_rawDesc,
 			NumEnums:      0,
 			NumMessages:   6,
 			NumExtensions: 0,
 			NumServices:   1,
 		},
-		GoTypes:           file_hostCommandService_proto_goTypes,
-		DependencyIndexes: file_hostCommandService_proto_depIdxs,
-		MessageInfos:      file_hostCommandService_proto_msgTypes,
+		GoTypes:           file_userCommandService_proto_goTypes,
+		DependencyIndexes: file_userCommandService_proto_depIdxs,
+		MessageInfos:      file_userCommandService_proto_msgTypes,
 	}.Build()
-	File_hostCommandService_proto = out.File
-	file_hostCommandService_proto_rawDesc = nil
-	file_hostCommandService_proto_goTypes = nil
-	file_hostCommandService_proto_depIdxs = nil
+	File_userCommandService_proto = out.File
+	file_userCommandService_proto_rawDesc = nil
+	file_userCommandService_proto_goTypes = nil
+	file_userCommandService_proto_depIdxs = nil
 }
 
 // Reference imports to suppress errors if they are not otherwise used.
@@ -683,5 +683,5 @@ var _UserCommandService_serviceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "hostCommandService.proto",
+	Metadata: "userCommandService.proto",
 }
