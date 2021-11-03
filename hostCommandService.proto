@@ -14,9 +14,6 @@ message HostCommandCreateFirstHostRequest{
   string firstName = 3;
   string lastName = 4;
   string password = 5;
-  string telephoneNumber1 = 6;
-  string telephoneNumber2 = 7;
-  string telephoneNumber3 = 8;
 }
 message HostCommandCreateFirstHostResponse{}
 
@@ -25,9 +22,6 @@ message HostCommandCreateRequest{
   string firstName = 2;
   string lastName = 3;
   string password = 4;
-  string telephoneNumber1 = 5;
-  string telephoneNumber2 = 6;
-  string telephoneNumber3 = 7;
 }
 message HostCommandCreateResponse {
 }
@@ -37,9 +31,6 @@ message HostCommandUpdateRequest{
   string firstName = 3;
   string lastName = 4;
   string password = 5;
-  string telephoneNumber1 = 6;
-  string telephoneNumber2 = 7;
-  string telephoneNumber3 = 8;
 }
 message HostCommandUpdateResponse {}
 message HostCommandDeleteRequest{
