@@ -24,7 +24,7 @@ const (
 	_ = protoimpl.EnforceVersion(protoimpl.MaxVersion - 20)
 )
 
-type HostCommandCreateRequest struct {
+type UserCommandCreateRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
@@ -35,8 +35,8 @@ type HostCommandCreateRequest struct {
 	Password  string `protobuf:"bytes,4,opt,name=password,proto3" json:"password,omitempty"`
 }
 
-func (x *HostCommandCreateRequest) Reset() {
-	*x = HostCommandCreateRequest{}
+func (x *UserCommandCreateRequest) Reset() {
+	*x = UserCommandCreateRequest{}
 	if protoimpl.UnsafeEnabled {
 		mi := &file_hostCommandService_proto_msgTypes[0]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -44,13 +44,13 @@ func (x *HostCommandCreateRequest) Reset() {
 	}
 }
 
-func (x *HostCommandCreateRequest) String() string {
+func (x *UserCommandCreateRequest) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
-func (*HostCommandCreateRequest) ProtoMessage() {}
+func (*UserCommandCreateRequest) ProtoMessage() {}
 
-func (x *HostCommandCreateRequest) ProtoReflect() protoreflect.Message {
+func (x *UserCommandCreateRequest) ProtoReflect() protoreflect.Message {
 	mi := &file_hostCommandService_proto_msgTypes[0]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -62,40 +62,40 @@ func (x *HostCommandCreateRequest) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-// Deprecated: Use HostCommandCreateRequest.ProtoReflect.Descriptor instead.
-func (*HostCommandCreateRequest) Descriptor() ([]byte, []int) {
+// Deprecated: Use UserCommandCreateRequest.ProtoReflect.Descriptor instead.
+func (*UserCommandCreateRequest) Descriptor() ([]byte, []int) {
 	return file_hostCommandService_proto_rawDescGZIP(), []int{0}
 }
 
-func (x *HostCommandCreateRequest) GetEmail() string {
+func (x *UserCommandCreateRequest) GetEmail() string {
 	if x != nil {
 		return x.Email
 	}
 	return ""
 }
 
-func (x *HostCommandCreateRequest) GetFirstName() string {
+func (x *UserCommandCreateRequest) GetFirstName() string {
 	if x != nil {
 		return x.FirstName
 	}
 	return ""
 }
 
-func (x *HostCommandCreateRequest) GetLastName() string {
+func (x *UserCommandCreateRequest) GetLastName() string {
 	if x != nil {
 		return x.LastName
 	}
 	return ""
 }
 
-func (x *HostCommandCreateRequest) GetPassword() string {
+func (x *UserCommandCreateRequest) GetPassword() string {
 	if x != nil {
 		return x.Password
 	}
 	return ""
 }
 
-type HostCommandCreateResponse struct {
+type UserCommandCreateResponse struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
@@ -103,8 +103,8 @@ type HostCommandCreateResponse struct {
 	Token string `protobuf:"bytes,1,opt,name=token,proto3" json:"token,omitempty"`
 }
 
-func (x *HostCommandCreateResponse) Reset() {
-	*x = HostCommandCreateResponse{}
+func (x *UserCommandCreateResponse) Reset() {
+	*x = UserCommandCreateResponse{}
 	if protoimpl.UnsafeEnabled {
 		mi := &file_hostCommandService_proto_msgTypes[1]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -112,13 +112,13 @@ func (x *HostCommandCreateResponse) Reset() {
 	}
 }
 
-func (x *HostCommandCreateResponse) String() string {
+func (x *UserCommandCreateResponse) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
-func (*HostCommandCreateResponse) ProtoMessage() {}
+func (*UserCommandCreateResponse) ProtoMessage() {}
 
-func (x *HostCommandCreateResponse) ProtoReflect() protoreflect.Message {
+func (x *UserCommandCreateResponse) ProtoReflect() protoreflect.Message {
 	mi := &file_hostCommandService_proto_msgTypes[1]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -130,32 +130,32 @@ func (x *HostCommandCreateResponse) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-// Deprecated: Use HostCommandCreateResponse.ProtoReflect.Descriptor instead.
-func (*HostCommandCreateResponse) Descriptor() ([]byte, []int) {
+// Deprecated: Use UserCommandCreateResponse.ProtoReflect.Descriptor instead.
+func (*UserCommandCreateResponse) Descriptor() ([]byte, []int) {
 	return file_hostCommandService_proto_rawDescGZIP(), []int{1}
 }
 
-func (x *HostCommandCreateResponse) GetToken() string {
+func (x *UserCommandCreateResponse) GetToken() string {
 	if x != nil {
 		return x.Token
 	}
 	return ""
 }
 
-type HostCommandUpdateRequest struct {
+type UserCommandUpdateRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	HostUUID  string `protobuf:"bytes,1,opt,name=hostUUID,proto3" json:"hostUUID,omitempty"`
+	UserUUID  string `protobuf:"bytes,1,opt,name=userUUID,proto3" json:"userUUID,omitempty"`
 	Email     string `protobuf:"bytes,2,opt,name=email,proto3" json:"email,omitempty"`
 	FirstName string `protobuf:"bytes,3,opt,name=firstName,proto3" json:"firstName,omitempty"`
 	LastName  string `protobuf:"bytes,4,opt,name=lastName,proto3" json:"lastName,omitempty"`
 	Password  string `protobuf:"bytes,5,opt,name=password,proto3" json:"password,omitempty"`
 }
 
-func (x *HostCommandUpdateRequest) Reset() {
-	*x = HostCommandUpdateRequest{}
+func (x *UserCommandUpdateRequest) Reset() {
+	*x = UserCommandUpdateRequest{}
 	if protoimpl.UnsafeEnabled {
 		mi := &file_hostCommandService_proto_msgTypes[2]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -163,13 +163,13 @@ func (x *HostCommandUpdateRequest) Reset() {
 	}
 }
 
-func (x *HostCommandUpdateRequest) String() string {
+func (x *UserCommandUpdateRequest) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
-func (*HostCommandUpdateRequest) ProtoMessage() {}
+func (*UserCommandUpdateRequest) ProtoMessage() {}
 
-func (x *HostCommandUpdateRequest) ProtoReflect() protoreflect.Message {
+func (x *UserCommandUpdateRequest) ProtoReflect() protoreflect.Message {
 	mi := &file_hostCommandService_proto_msgTypes[2]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -181,54 +181,54 @@ func (x *HostCommandUpdateRequest) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-// Deprecated: Use HostCommandUpdateRequest.ProtoReflect.Descriptor instead.
-func (*HostCommandUpdateRequest) Descriptor() ([]byte, []int) {
+// Deprecated: Use UserCommandUpdateRequest.ProtoReflect.Descriptor instead.
+func (*UserCommandUpdateRequest) Descriptor() ([]byte, []int) {
 	return file_hostCommandService_proto_rawDescGZIP(), []int{2}
 }
 
-func (x *HostCommandUpdateRequest) GetHostUUID() string {
+func (x *UserCommandUpdateRequest) GetUserUUID() string {
 	if x != nil {
-		return x.HostUUID
+		return x.UserUUID
 	}
 	return ""
 }
 
-func (x *HostCommandUpdateRequest) GetEmail() string {
+func (x *UserCommandUpdateRequest) GetEmail() string {
 	if x != nil {
 		return x.Email
 	}
 	return ""
 }
 
-func (x *HostCommandUpdateRequest) GetFirstName() string {
+func (x *UserCommandUpdateRequest) GetFirstName() string {
 	if x != nil {
 		return x.FirstName
 	}
 	return ""
 }
 
-func (x *HostCommandUpdateRequest) GetLastName() string {
+func (x *UserCommandUpdateRequest) GetLastName() string {
 	if x != nil {
 		return x.LastName
 	}
 	return ""
 }
 
-func (x *HostCommandUpdateRequest) GetPassword() string {
+func (x *UserCommandUpdateRequest) GetPassword() string {
 	if x != nil {
 		return x.Password
 	}
 	return ""
 }
 
-type HostCommandUpdateResponse struct {
+type UserCommandUpdateResponse struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 }
 
-func (x *HostCommandUpdateResponse) Reset() {
-	*x = HostCommandUpdateResponse{}
+func (x *UserCommandUpdateResponse) Reset() {
+	*x = UserCommandUpdateResponse{}
 	if protoimpl.UnsafeEnabled {
 		mi := &file_hostCommandService_proto_msgTypes[3]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -236,13 +236,13 @@ func (x *HostCommandUpdateResponse) Reset() {
 	}
 }
 
-func (x *HostCommandUpdateResponse) String() string {
+func (x *UserCommandUpdateResponse) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
-func (*HostCommandUpdateResponse) ProtoMessage() {}
+func (*UserCommandUpdateResponse) ProtoMessage() {}
 
-func (x *HostCommandUpdateResponse) ProtoReflect() protoreflect.Message {
+func (x *UserCommandUpdateResponse) ProtoReflect() protoreflect.Message {
 	mi := &file_hostCommandService_proto_msgTypes[3]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -254,21 +254,21 @@ func (x *HostCommandUpdateResponse) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-// Deprecated: Use HostCommandUpdateResponse.ProtoReflect.Descriptor instead.
-func (*HostCommandUpdateResponse) Descriptor() ([]byte, []int) {
+// Deprecated: Use UserCommandUpdateResponse.ProtoReflect.Descriptor instead.
+func (*UserCommandUpdateResponse) Descriptor() ([]byte, []int) {
 	return file_hostCommandService_proto_rawDescGZIP(), []int{3}
 }
 
-type HostCommandDeleteRequest struct {
+type UserCommandDeleteRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	HostUUID string `protobuf:"bytes,1,opt,name=hostUUID,proto3" json:"hostUUID,omitempty"`
+	UserUUID string `protobuf:"bytes,1,opt,name=userUUID,proto3" json:"userUUID,omitempty"`
 }
 
-func (x *HostCommandDeleteRequest) Reset() {
-	*x = HostCommandDeleteRequest{}
+func (x *UserCommandDeleteRequest) Reset() {
+	*x = UserCommandDeleteRequest{}
 	if protoimpl.UnsafeEnabled {
 		mi := &file_hostCommandService_proto_msgTypes[4]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -276,13 +276,13 @@ func (x *HostCommandDeleteRequest) Reset() {
 	}
 }
 
-func (x *HostCommandDeleteRequest) String() string {
+func (x *UserCommandDeleteRequest) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
-func (*HostCommandDeleteRequest) ProtoMessage() {}
+func (*UserCommandDeleteRequest) ProtoMessage() {}
 
-func (x *HostCommandDeleteRequest) ProtoReflect() protoreflect.Message {
+func (x *UserCommandDeleteRequest) ProtoReflect() protoreflect.Message {
 	mi := &file_hostCommandService_proto_msgTypes[4]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -294,26 +294,26 @@ func (x *HostCommandDeleteRequest) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-// Deprecated: Use HostCommandDeleteRequest.ProtoReflect.Descriptor instead.
-func (*HostCommandDeleteRequest) Descriptor() ([]byte, []int) {
+// Deprecated: Use UserCommandDeleteRequest.ProtoReflect.Descriptor instead.
+func (*UserCommandDeleteRequest) Descriptor() ([]byte, []int) {
 	return file_hostCommandService_proto_rawDescGZIP(), []int{4}
 }
 
-func (x *HostCommandDeleteRequest) GetHostUUID() string {
+func (x *UserCommandDeleteRequest) GetUserUUID() string {
 	if x != nil {
-		return x.HostUUID
+		return x.UserUUID
 	}
 	return ""
 }
 
-type HostCommandDeleteResponse struct {
+type UserCommandDeleteResponse struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 }
 
-func (x *HostCommandDeleteResponse) Reset() {
-	*x = HostCommandDeleteResponse{}
+func (x *UserCommandDeleteResponse) Reset() {
+	*x = UserCommandDeleteResponse{}
 	if protoimpl.UnsafeEnabled {
 		mi := &file_hostCommandService_proto_msgTypes[5]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -321,13 +321,13 @@ func (x *HostCommandDeleteResponse) Reset() {
 	}
 }
 
-func (x *HostCommandDeleteResponse) String() string {
+func (x *UserCommandDeleteResponse) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
-func (*HostCommandDeleteResponse) ProtoMessage() {}
+func (*UserCommandDeleteResponse) ProtoMessage() {}
 
-func (x *HostCommandDeleteResponse) ProtoReflect() protoreflect.Message {
+func (x *UserCommandDeleteResponse) ProtoReflect() protoreflect.Message {
 	mi := &file_hostCommandService_proto_msgTypes[5]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -339,8 +339,8 @@ func (x *HostCommandDeleteResponse) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-// Deprecated: Use HostCommandDeleteResponse.ProtoReflect.Descriptor instead.
-func (*HostCommandDeleteResponse) Descriptor() ([]byte, []int) {
+// Deprecated: Use UserCommandDeleteResponse.ProtoReflect.Descriptor instead.
+func (*UserCommandDeleteResponse) Descriptor() ([]byte, []int) {
 	return file_hostCommandService_proto_rawDescGZIP(), []int{5}
 }
 
@@ -349,7 +349,7 @@ var File_hostCommandService_proto protoreflect.FileDescriptor
 var file_hostCommandService_proto_rawDesc = []byte{
 	0x0a, 0x18, 0x68, 0x6f, 0x73, 0x74, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x53, 0x65, 0x72,
 	0x76, 0x69, 0x63, 0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x12, 0x05, 0x6e, 0x6f, 0x77, 0x69,
-	0x6e, 0x22, 0x86, 0x01, 0x0a, 0x18, 0x48, 0x6f, 0x73, 0x74, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e,
+	0x6e, 0x22, 0x86, 0x01, 0x0a, 0x18, 0x55, 0x73, 0x65, 0x72, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e,
 	0x64, 0x43, 0x72, 0x65, 0x61, 0x74, 0x65, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x14,
 	0x0a, 0x05, 0x65, 0x6d, 0x61, 0x69, 0x6c, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x05, 0x65,
 	0x6d, 0x61, 0x69, 0x6c, 0x12, 0x1c, 0x0a, 0x09, 0x66, 0x69, 0x72, 0x73, 0x74, 0x4e, 0x61, 0x6d,
@@ -357,43 +357,43 @@ var file_hostCommandService_proto_rawDesc = []byte{
 	0x6d, 0x65, 0x12, 0x1a, 0x0a, 0x08, 0x6c, 0x61, 0x73, 0x74, 0x4e, 0x61, 0x6d, 0x65, 0x18, 0x03,
 	0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x6c, 0x61, 0x73, 0x74, 0x4e, 0x61, 0x6d, 0x65, 0x12, 0x1a,
 	0x0a, 0x08, 0x70, 0x61, 0x73, 0x73, 0x77, 0x6f, 0x72, 0x64, 0x18, 0x04, 0x20, 0x01, 0x28, 0x09,
-	0x52, 0x08, 0x70, 0x61, 0x73, 0x73, 0x77, 0x6f, 0x72, 0x64, 0x22, 0x31, 0x0a, 0x19, 0x48, 0x6f,
-	0x73, 0x74, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x43, 0x72, 0x65, 0x61, 0x74, 0x65, 0x52,
+	0x52, 0x08, 0x70, 0x61, 0x73, 0x73, 0x77, 0x6f, 0x72, 0x64, 0x22, 0x31, 0x0a, 0x19, 0x55, 0x73,
+	0x65, 0x72, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x43, 0x72, 0x65, 0x61, 0x74, 0x65, 0x52,
 	0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x14, 0x0a, 0x05, 0x74, 0x6f, 0x6b, 0x65, 0x6e,
 	0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x05, 0x74, 0x6f, 0x6b, 0x65, 0x6e, 0x22, 0xa2, 0x01,
-	0x0a, 0x18, 0x48, 0x6f, 0x73, 0x74, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x55, 0x70, 0x64,
-	0x61, 0x74, 0x65, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x1a, 0x0a, 0x08, 0x68, 0x6f,
-	0x73, 0x74, 0x55, 0x55, 0x49, 0x44, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x68, 0x6f,
-	0x73, 0x74, 0x55, 0x55, 0x49, 0x44, 0x12, 0x14, 0x0a, 0x05, 0x65, 0x6d, 0x61, 0x69, 0x6c, 0x18,
+	0x0a, 0x18, 0x55, 0x73, 0x65, 0x72, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x55, 0x70, 0x64,
+	0x61, 0x74, 0x65, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x1a, 0x0a, 0x08, 0x75, 0x73,
+	0x65, 0x72, 0x55, 0x55, 0x49, 0x44, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x75, 0x73,
+	0x65, 0x72, 0x55, 0x55, 0x49, 0x44, 0x12, 0x14, 0x0a, 0x05, 0x65, 0x6d, 0x61, 0x69, 0x6c, 0x18,
 	0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x05, 0x65, 0x6d, 0x61, 0x69, 0x6c, 0x12, 0x1c, 0x0a, 0x09,
 	0x66, 0x69, 0x72, 0x73, 0x74, 0x4e, 0x61, 0x6d, 0x65, 0x18, 0x03, 0x20, 0x01, 0x28, 0x09, 0x52,
 	0x09, 0x66, 0x69, 0x72, 0x73, 0x74, 0x4e, 0x61, 0x6d, 0x65, 0x12, 0x1a, 0x0a, 0x08, 0x6c, 0x61,
 	0x73, 0x74, 0x4e, 0x61, 0x6d, 0x65, 0x18, 0x04, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x6c, 0x61,
 	0x73, 0x74, 0x4e, 0x61, 0x6d, 0x65, 0x12, 0x1a, 0x0a, 0x08, 0x70, 0x61, 0x73, 0x73, 0x77, 0x6f,
 	0x72, 0x64, 0x18, 0x05, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x70, 0x61, 0x73, 0x73, 0x77, 0x6f,
-	0x72, 0x64, 0x22, 0x1b, 0x0a, 0x19, 0x48, 0x6f, 0x73, 0x74, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e,
+	0x72, 0x64, 0x22, 0x1b, 0x0a, 0x19, 0x55, 0x73, 0x65, 0x72, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e,
 	0x64, 0x55, 0x70, 0x64, 0x61, 0x74, 0x65, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22,
-	0x36, 0x0a, 0x18, 0x48, 0x6f, 0x73, 0x74, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x44, 0x65,
-	0x6c, 0x65, 0x74, 0x65, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x1a, 0x0a, 0x08, 0x68,
-	0x6f, 0x73, 0x74, 0x55, 0x55, 0x49, 0x44, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x68,
-	0x6f, 0x73, 0x74, 0x55, 0x55, 0x49, 0x44, 0x22, 0x1b, 0x0a, 0x19, 0x48, 0x6f, 0x73, 0x74, 0x43,
+	0x36, 0x0a, 0x18, 0x55, 0x73, 0x65, 0x72, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x44, 0x65,
+	0x6c, 0x65, 0x74, 0x65, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x1a, 0x0a, 0x08, 0x75,
+	0x73, 0x65, 0x72, 0x55, 0x55, 0x49, 0x44, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x75,
+	0x73, 0x65, 0x72, 0x55, 0x55, 0x49, 0x44, 0x22, 0x1b, 0x0a, 0x19, 0x55, 0x73, 0x65, 0x72, 0x43,
 	0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x44, 0x65, 0x6c, 0x65, 0x74, 0x65, 0x52, 0x65, 0x73, 0x70,
-	0x6f, 0x6e, 0x73, 0x65, 0x32, 0x81, 0x02, 0x0a, 0x12, 0x48, 0x6f, 0x73, 0x74, 0x43, 0x6f, 0x6d,
+	0x6f, 0x6e, 0x73, 0x65, 0x32, 0x81, 0x02, 0x0a, 0x12, 0x55, 0x73, 0x65, 0x72, 0x43, 0x6f, 0x6d,
 	0x6d, 0x61, 0x6e, 0x64, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x12, 0x4d, 0x0a, 0x06, 0x43,
-	0x72, 0x65, 0x61, 0x74, 0x65, 0x12, 0x1f, 0x2e, 0x6e, 0x6f, 0x77, 0x69, 0x6e, 0x2e, 0x48, 0x6f,
-	0x73, 0x74, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x43, 0x72, 0x65, 0x61, 0x74, 0x65, 0x52,
-	0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x20, 0x2e, 0x6e, 0x6f, 0x77, 0x69, 0x6e, 0x2e, 0x48,
-	0x6f, 0x73, 0x74, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x43, 0x72, 0x65, 0x61, 0x74, 0x65,
+	0x72, 0x65, 0x61, 0x74, 0x65, 0x12, 0x1f, 0x2e, 0x6e, 0x6f, 0x77, 0x69, 0x6e, 0x2e, 0x55, 0x73,
+	0x65, 0x72, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x43, 0x72, 0x65, 0x61, 0x74, 0x65, 0x52,
+	0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x20, 0x2e, 0x6e, 0x6f, 0x77, 0x69, 0x6e, 0x2e, 0x55,
+	0x73, 0x65, 0x72, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x43, 0x72, 0x65, 0x61, 0x74, 0x65,
 	0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x12, 0x4d, 0x0a, 0x06, 0x55, 0x70,
-	0x64, 0x61, 0x74, 0x65, 0x12, 0x1f, 0x2e, 0x6e, 0x6f, 0x77, 0x69, 0x6e, 0x2e, 0x48, 0x6f, 0x73,
-	0x74, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x55, 0x70, 0x64, 0x61, 0x74, 0x65, 0x52, 0x65,
-	0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x20, 0x2e, 0x6e, 0x6f, 0x77, 0x69, 0x6e, 0x2e, 0x48, 0x6f,
-	0x73, 0x74, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x55, 0x70, 0x64, 0x61, 0x74, 0x65, 0x52,
+	0x64, 0x61, 0x74, 0x65, 0x12, 0x1f, 0x2e, 0x6e, 0x6f, 0x77, 0x69, 0x6e, 0x2e, 0x55, 0x73, 0x65,
+	0x72, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x55, 0x70, 0x64, 0x61, 0x74, 0x65, 0x52, 0x65,
+	0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x20, 0x2e, 0x6e, 0x6f, 0x77, 0x69, 0x6e, 0x2e, 0x55, 0x73,
+	0x65, 0x72, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x55, 0x70, 0x64, 0x61, 0x74, 0x65, 0x52,
 	0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x12, 0x4d, 0x0a, 0x06, 0x44, 0x65, 0x6c,
-	0x65, 0x74, 0x65, 0x12, 0x1f, 0x2e, 0x6e, 0x6f, 0x77, 0x69, 0x6e, 0x2e, 0x48, 0x6f, 0x73, 0x74,
+	0x65, 0x74, 0x65, 0x12, 0x1f, 0x2e, 0x6e, 0x6f, 0x77, 0x69, 0x6e, 0x2e, 0x55, 0x73, 0x65, 0x72,
 	0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x44, 0x65, 0x6c, 0x65, 0x74, 0x65, 0x52, 0x65, 0x71,
-	0x75, 0x65, 0x73, 0x74, 0x1a, 0x20, 0x2e, 0x6e, 0x6f, 0x77, 0x69, 0x6e, 0x2e, 0x48, 0x6f, 0x73,
-	0x74, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x44, 0x65, 0x6c, 0x65, 0x74, 0x65, 0x52, 0x65,
+	0x75, 0x65, 0x73, 0x74, 0x1a, 0x20, 0x2e, 0x6e, 0x6f, 0x77, 0x69, 0x6e, 0x2e, 0x55, 0x73, 0x65,
+	0x72, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x44, 0x65, 0x6c, 0x65, 0x74, 0x65, 0x52, 0x65,
 	0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x42, 0x2e, 0x5a, 0x2c, 0x67, 0x69, 0x74, 0x68,
 	0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x73, 0x6f, 0x66, 0x74, 0x69, 0x61, 0x2d, 0x69, 0x6e,
 	0x63, 0x2f, 0x6e, 0x6f, 0x77, 0x69, 0x6e, 0x2d, 0x64, 0x65, 0x66, 0x69, 0x6e, 0x69, 0x74, 0x69,
@@ -414,20 +414,20 @@ func file_hostCommandService_proto_rawDescGZIP() []byte {
 
 var file_hostCommandService_proto_msgTypes = make([]protoimpl.MessageInfo, 6)
 var file_hostCommandService_proto_goTypes = []interface{}{
-	(*HostCommandCreateRequest)(nil),  // 0: nowin.HostCommandCreateRequest
-	(*HostCommandCreateResponse)(nil), // 1: nowin.HostCommandCreateResponse
-	(*HostCommandUpdateRequest)(nil),  // 2: nowin.HostCommandUpdateRequest
-	(*HostCommandUpdateResponse)(nil), // 3: nowin.HostCommandUpdateResponse
-	(*HostCommandDeleteRequest)(nil),  // 4: nowin.HostCommandDeleteRequest
-	(*HostCommandDeleteResponse)(nil), // 5: nowin.HostCommandDeleteResponse
+	(*UserCommandCreateRequest)(nil),  // 0: nowin.UserCommandCreateRequest
+	(*UserCommandCreateResponse)(nil), // 1: nowin.UserCommandCreateResponse
+	(*UserCommandUpdateRequest)(nil),  // 2: nowin.UserCommandUpdateRequest
+	(*UserCommandUpdateResponse)(nil), // 3: nowin.UserCommandUpdateResponse
+	(*UserCommandDeleteRequest)(nil),  // 4: nowin.UserCommandDeleteRequest
+	(*UserCommandDeleteResponse)(nil), // 5: nowin.UserCommandDeleteResponse
 }
 var file_hostCommandService_proto_depIdxs = []int32{
-	0, // 0: nowin.HostCommandService.Create:input_type -> nowin.HostCommandCreateRequest
-	2, // 1: nowin.HostCommandService.Update:input_type -> nowin.HostCommandUpdateRequest
-	4, // 2: nowin.HostCommandService.Delete:input_type -> nowin.HostCommandDeleteRequest
-	1, // 3: nowin.HostCommandService.Create:output_type -> nowin.HostCommandCreateResponse
-	3, // 4: nowin.HostCommandService.Update:output_type -> nowin.HostCommandUpdateResponse
-	5, // 5: nowin.HostCommandService.Delete:output_type -> nowin.HostCommandDeleteResponse
+	0, // 0: nowin.UserCommandService.Create:input_type -> nowin.UserCommandCreateRequest
+	2, // 1: nowin.UserCommandService.Update:input_type -> nowin.UserCommandUpdateRequest
+	4, // 2: nowin.UserCommandService.Delete:input_type -> nowin.UserCommandDeleteRequest
+	1, // 3: nowin.UserCommandService.Create:output_type -> nowin.UserCommandCreateResponse
+	3, // 4: nowin.UserCommandService.Update:output_type -> nowin.UserCommandUpdateResponse
+	5, // 5: nowin.UserCommandService.Delete:output_type -> nowin.UserCommandDeleteResponse
 	3, // [3:6] is the sub-list for method output_type
 	0, // [0:3] is the sub-list for method input_type
 	0, // [0:0] is the sub-list for extension type_name
@@ -442,7 +442,7 @@ func file_hostCommandService_proto_init() {
 	}
 	if !protoimpl.UnsafeEnabled {
 		file_hostCommandService_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*HostCommandCreateRequest); i {
+			switch v := v.(*UserCommandCreateRequest); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -454,7 +454,7 @@ func file_hostCommandService_proto_init() {
 			}
 		}
 		file_hostCommandService_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*HostCommandCreateResponse); i {
+			switch v := v.(*UserCommandCreateResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -466,7 +466,7 @@ func file_hostCommandService_proto_init() {
 			}
 		}
 		file_hostCommandService_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*HostCommandUpdateRequest); i {
+			switch v := v.(*UserCommandUpdateRequest); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -478,7 +478,7 @@ func file_hostCommandService_proto_init() {
 			}
 		}
 		file_hostCommandService_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*HostCommandUpdateResponse); i {
+			switch v := v.(*UserCommandUpdateResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -490,7 +490,7 @@ func file_hostCommandService_proto_init() {
 			}
 		}
 		file_hostCommandService_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*HostCommandDeleteRequest); i {
+			switch v := v.(*UserCommandDeleteRequest); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -502,7 +502,7 @@ func file_hostCommandService_proto_init() {
 			}
 		}
 		file_hostCommandService_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*HostCommandDeleteResponse); i {
+			switch v := v.(*UserCommandDeleteResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -542,144 +542,144 @@ var _ grpc.ClientConnInterface
 // is compatible with the grpc package it is being compiled against.
 const _ = grpc.SupportPackageIsVersion6
 
-// HostCommandServiceClient is the client API for HostCommandService service.
+// UserCommandServiceClient is the client API for UserCommandService service.
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
-type HostCommandServiceClient interface {
-	Create(ctx context.Context, in *HostCommandCreateRequest, opts ...grpc.CallOption) (*HostCommandCreateResponse, error)
-	Update(ctx context.Context, in *HostCommandUpdateRequest, opts ...grpc.CallOption) (*HostCommandUpdateResponse, error)
-	Delete(ctx context.Context, in *HostCommandDeleteRequest, opts ...grpc.CallOption) (*HostCommandDeleteResponse, error)
+type UserCommandServiceClient interface {
+	Create(ctx context.Context, in *UserCommandCreateRequest, opts ...grpc.CallOption) (*UserCommandCreateResponse, error)
+	Update(ctx context.Context, in *UserCommandUpdateRequest, opts ...grpc.CallOption) (*UserCommandUpdateResponse, error)
+	Delete(ctx context.Context, in *UserCommandDeleteRequest, opts ...grpc.CallOption) (*UserCommandDeleteResponse, error)
 }
 
-type hostCommandServiceClient struct {
+type userCommandServiceClient struct {
 	cc grpc.ClientConnInterface
 }
 
-func NewHostCommandServiceClient(cc grpc.ClientConnInterface) HostCommandServiceClient {
-	return &hostCommandServiceClient{cc}
+func NewUserCommandServiceClient(cc grpc.ClientConnInterface) UserCommandServiceClient {
+	return &userCommandServiceClient{cc}
 }
 
-func (c *hostCommandServiceClient) Create(ctx context.Context, in *HostCommandCreateRequest, opts ...grpc.CallOption) (*HostCommandCreateResponse, error) {
-	out := new(HostCommandCreateResponse)
-	err := c.cc.Invoke(ctx, "/nowin.HostCommandService/Create", in, out, opts...)
+func (c *userCommandServiceClient) Create(ctx context.Context, in *UserCommandCreateRequest, opts ...grpc.CallOption) (*UserCommandCreateResponse, error) {
+	out := new(UserCommandCreateResponse)
+	err := c.cc.Invoke(ctx, "/nowin.UserCommandService/Create", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *hostCommandServiceClient) Update(ctx context.Context, in *HostCommandUpdateRequest, opts ...grpc.CallOption) (*HostCommandUpdateResponse, error) {
-	out := new(HostCommandUpdateResponse)
-	err := c.cc.Invoke(ctx, "/nowin.HostCommandService/Update", in, out, opts...)
+func (c *userCommandServiceClient) Update(ctx context.Context, in *UserCommandUpdateRequest, opts ...grpc.CallOption) (*UserCommandUpdateResponse, error) {
+	out := new(UserCommandUpdateResponse)
+	err := c.cc.Invoke(ctx, "/nowin.UserCommandService/Update", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *hostCommandServiceClient) Delete(ctx context.Context, in *HostCommandDeleteRequest, opts ...grpc.CallOption) (*HostCommandDeleteResponse, error) {
-	out := new(HostCommandDeleteResponse)
-	err := c.cc.Invoke(ctx, "/nowin.HostCommandService/Delete", in, out, opts...)
+func (c *userCommandServiceClient) Delete(ctx context.Context, in *UserCommandDeleteRequest, opts ...grpc.CallOption) (*UserCommandDeleteResponse, error) {
+	out := new(UserCommandDeleteResponse)
+	err := c.cc.Invoke(ctx, "/nowin.UserCommandService/Delete", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-// HostCommandServiceServer is the server API for HostCommandService service.
-type HostCommandServiceServer interface {
-	Create(context.Context, *HostCommandCreateRequest) (*HostCommandCreateResponse, error)
-	Update(context.Context, *HostCommandUpdateRequest) (*HostCommandUpdateResponse, error)
-	Delete(context.Context, *HostCommandDeleteRequest) (*HostCommandDeleteResponse, error)
+// UserCommandServiceServer is the server API for UserCommandService service.
+type UserCommandServiceServer interface {
+	Create(context.Context, *UserCommandCreateRequest) (*UserCommandCreateResponse, error)
+	Update(context.Context, *UserCommandUpdateRequest) (*UserCommandUpdateResponse, error)
+	Delete(context.Context, *UserCommandDeleteRequest) (*UserCommandDeleteResponse, error)
 }
 
-// UnimplementedHostCommandServiceServer can be embedded to have forward compatible implementations.
-type UnimplementedHostCommandServiceServer struct {
+// UnimplementedUserCommandServiceServer can be embedded to have forward compatible implementations.
+type UnimplementedUserCommandServiceServer struct {
 }
 
-func (*UnimplementedHostCommandServiceServer) Create(context.Context, *HostCommandCreateRequest) (*HostCommandCreateResponse, error) {
+func (*UnimplementedUserCommandServiceServer) Create(context.Context, *UserCommandCreateRequest) (*UserCommandCreateResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Create not implemented")
 }
-func (*UnimplementedHostCommandServiceServer) Update(context.Context, *HostCommandUpdateRequest) (*HostCommandUpdateResponse, error) {
+func (*UnimplementedUserCommandServiceServer) Update(context.Context, *UserCommandUpdateRequest) (*UserCommandUpdateResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Update not implemented")
 }
-func (*UnimplementedHostCommandServiceServer) Delete(context.Context, *HostCommandDeleteRequest) (*HostCommandDeleteResponse, error) {
+func (*UnimplementedUserCommandServiceServer) Delete(context.Context, *UserCommandDeleteRequest) (*UserCommandDeleteResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Delete not implemented")
 }
 
-func RegisterHostCommandServiceServer(s *grpc.Server, srv HostCommandServiceServer) {
-	s.RegisterService(&_HostCommandService_serviceDesc, srv)
+func RegisterUserCommandServiceServer(s *grpc.Server, srv UserCommandServiceServer) {
+	s.RegisterService(&_UserCommandService_serviceDesc, srv)
 }
 
-func _HostCommandService_Create_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(HostCommandCreateRequest)
+func _UserCommandService_Create_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(UserCommandCreateRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(HostCommandServiceServer).Create(ctx, in)
+		return srv.(UserCommandServiceServer).Create(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/nowin.HostCommandService/Create",
+		FullMethod: "/nowin.UserCommandService/Create",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(HostCommandServiceServer).Create(ctx, req.(*HostCommandCreateRequest))
+		return srv.(UserCommandServiceServer).Create(ctx, req.(*UserCommandCreateRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _HostCommandService_Update_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(HostCommandUpdateRequest)
+func _UserCommandService_Update_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(UserCommandUpdateRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(HostCommandServiceServer).Update(ctx, in)
+		return srv.(UserCommandServiceServer).Update(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/nowin.HostCommandService/Update",
+		FullMethod: "/nowin.UserCommandService/Update",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(HostCommandServiceServer).Update(ctx, req.(*HostCommandUpdateRequest))
+		return srv.(UserCommandServiceServer).Update(ctx, req.(*UserCommandUpdateRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _HostCommandService_Delete_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(HostCommandDeleteRequest)
+func _UserCommandService_Delete_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(UserCommandDeleteRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(HostCommandServiceServer).Delete(ctx, in)
+		return srv.(UserCommandServiceServer).Delete(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/nowin.HostCommandService/Delete",
+		FullMethod: "/nowin.UserCommandService/Delete",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(HostCommandServiceServer).Delete(ctx, req.(*HostCommandDeleteRequest))
+		return srv.(UserCommandServiceServer).Delete(ctx, req.(*UserCommandDeleteRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-var _HostCommandService_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "nowin.HostCommandService",
-	HandlerType: (*HostCommandServiceServer)(nil),
+var _UserCommandService_serviceDesc = grpc.ServiceDesc{
+	ServiceName: "nowin.UserCommandService",
+	HandlerType: (*UserCommandServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
 			MethodName: "Create",
-			Handler:    _HostCommandService_Create_Handler,
+			Handler:    _UserCommandService_Create_Handler,
 		},
 		{
 			MethodName: "Update",
-			Handler:    _HostCommandService_Update_Handler,
+			Handler:    _UserCommandService_Update_Handler,
 		},
 		{
 			MethodName: "Delete",
-			Handler:    _HostCommandService_Delete_Handler,
+			Handler:    _UserCommandService_Delete_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
