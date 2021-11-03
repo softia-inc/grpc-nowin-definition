@@ -13,7 +13,6 @@ import (
 	status "google.golang.org/grpc/status"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
-	timestamppb "google.golang.org/protobuf/types/known/timestamppb"
 	reflect "reflect"
 	sync "sync"
 )
@@ -25,7 +24,7 @@ const (
 	_ = protoimpl.EnforceVersion(protoimpl.MaxVersion - 20)
 )
 
-type AuthorizationCommandAuthorizeHostRequest struct {
+type AuthorizationCommandAuthorizeRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
@@ -34,8 +33,8 @@ type AuthorizationCommandAuthorizeHostRequest struct {
 	Password string `protobuf:"bytes,2,opt,name=password,proto3" json:"password,omitempty"`
 }
 
-func (x *AuthorizationCommandAuthorizeHostRequest) Reset() {
-	*x = AuthorizationCommandAuthorizeHostRequest{}
+func (x *AuthorizationCommandAuthorizeRequest) Reset() {
+	*x = AuthorizationCommandAuthorizeRequest{}
 	if protoimpl.UnsafeEnabled {
 		mi := &file_authorizationCommandService_proto_msgTypes[0]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -43,13 +42,13 @@ func (x *AuthorizationCommandAuthorizeHostRequest) Reset() {
 	}
 }
 
-func (x *AuthorizationCommandAuthorizeHostRequest) String() string {
+func (x *AuthorizationCommandAuthorizeRequest) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
-func (*AuthorizationCommandAuthorizeHostRequest) ProtoMessage() {}
+func (*AuthorizationCommandAuthorizeRequest) ProtoMessage() {}
 
-func (x *AuthorizationCommandAuthorizeHostRequest) ProtoReflect() protoreflect.Message {
+func (x *AuthorizationCommandAuthorizeRequest) ProtoReflect() protoreflect.Message {
 	mi := &file_authorizationCommandService_proto_msgTypes[0]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -61,38 +60,37 @@ func (x *AuthorizationCommandAuthorizeHostRequest) ProtoReflect() protoreflect.M
 	return mi.MessageOf(x)
 }
 
-// Deprecated: Use AuthorizationCommandAuthorizeHostRequest.ProtoReflect.Descriptor instead.
-func (*AuthorizationCommandAuthorizeHostRequest) Descriptor() ([]byte, []int) {
+// Deprecated: Use AuthorizationCommandAuthorizeRequest.ProtoReflect.Descriptor instead.
+func (*AuthorizationCommandAuthorizeRequest) Descriptor() ([]byte, []int) {
 	return file_authorizationCommandService_proto_rawDescGZIP(), []int{0}
 }
 
-func (x *AuthorizationCommandAuthorizeHostRequest) GetEmail() string {
+func (x *AuthorizationCommandAuthorizeRequest) GetEmail() string {
 	if x != nil {
 		return x.Email
 	}
 	return ""
 }
 
-func (x *AuthorizationCommandAuthorizeHostRequest) GetPassword() string {
+func (x *AuthorizationCommandAuthorizeRequest) GetPassword() string {
 	if x != nil {
 		return x.Password
 	}
 	return ""
 }
 
-type AuthorizationCommandAuthorizeHostResponse struct {
+type AuthorizationCommandAuthorizeResponse struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	JwtToken  string                 `protobuf:"bytes,1,opt,name=jwtToken,proto3" json:"jwtToken,omitempty"`
-	LastName  string                 `protobuf:"bytes,2,opt,name=lastName,proto3" json:"lastName,omitempty"`
-	FirstName string                 `protobuf:"bytes,3,opt,name=firstName,proto3" json:"firstName,omitempty"`
-	ExpiredAt *timestamppb.Timestamp `protobuf:"bytes,4,opt,name=expiredAt,proto3" json:"expiredAt,omitempty"`
+	JwtToken  string `protobuf:"bytes,1,opt,name=jwtToken,proto3" json:"jwtToken,omitempty"`
+	LastName  string `protobuf:"bytes,2,opt,name=lastName,proto3" json:"lastName,omitempty"`
+	FirstName string `protobuf:"bytes,3,opt,name=firstName,proto3" json:"firstName,omitempty"`
 }
 
-func (x *AuthorizationCommandAuthorizeHostResponse) Reset() {
-	*x = AuthorizationCommandAuthorizeHostResponse{}
+func (x *AuthorizationCommandAuthorizeResponse) Reset() {
+	*x = AuthorizationCommandAuthorizeResponse{}
 	if protoimpl.UnsafeEnabled {
 		mi := &file_authorizationCommandService_proto_msgTypes[1]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -100,13 +98,13 @@ func (x *AuthorizationCommandAuthorizeHostResponse) Reset() {
 	}
 }
 
-func (x *AuthorizationCommandAuthorizeHostResponse) String() string {
+func (x *AuthorizationCommandAuthorizeResponse) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
-func (*AuthorizationCommandAuthorizeHostResponse) ProtoMessage() {}
+func (*AuthorizationCommandAuthorizeResponse) ProtoMessage() {}
 
-func (x *AuthorizationCommandAuthorizeHostResponse) ProtoReflect() protoreflect.Message {
+func (x *AuthorizationCommandAuthorizeResponse) ProtoReflect() protoreflect.Message {
 	mi := &file_authorizationCommandService_proto_msgTypes[1]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -118,37 +116,30 @@ func (x *AuthorizationCommandAuthorizeHostResponse) ProtoReflect() protoreflect.
 	return mi.MessageOf(x)
 }
 
-// Deprecated: Use AuthorizationCommandAuthorizeHostResponse.ProtoReflect.Descriptor instead.
-func (*AuthorizationCommandAuthorizeHostResponse) Descriptor() ([]byte, []int) {
+// Deprecated: Use AuthorizationCommandAuthorizeResponse.ProtoReflect.Descriptor instead.
+func (*AuthorizationCommandAuthorizeResponse) Descriptor() ([]byte, []int) {
 	return file_authorizationCommandService_proto_rawDescGZIP(), []int{1}
 }
 
-func (x *AuthorizationCommandAuthorizeHostResponse) GetJwtToken() string {
+func (x *AuthorizationCommandAuthorizeResponse) GetJwtToken() string {
 	if x != nil {
 		return x.JwtToken
 	}
 	return ""
 }
 
-func (x *AuthorizationCommandAuthorizeHostResponse) GetLastName() string {
+func (x *AuthorizationCommandAuthorizeResponse) GetLastName() string {
 	if x != nil {
 		return x.LastName
 	}
 	return ""
 }
 
-func (x *AuthorizationCommandAuthorizeHostResponse) GetFirstName() string {
+func (x *AuthorizationCommandAuthorizeResponse) GetFirstName() string {
 	if x != nil {
 		return x.FirstName
 	}
 	return ""
-}
-
-func (x *AuthorizationCommandAuthorizeHostResponse) GetExpiredAt() *timestamppb.Timestamp {
-	if x != nil {
-		return x.ExpiredAt
-	}
-	return nil
 }
 
 var File_authorizationCommandService_proto protoreflect.FileDescriptor
@@ -156,36 +147,29 @@ var File_authorizationCommandService_proto protoreflect.FileDescriptor
 var file_authorizationCommandService_proto_rawDesc = []byte{
 	0x0a, 0x21, 0x61, 0x75, 0x74, 0x68, 0x6f, 0x72, 0x69, 0x7a, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x43,
 	0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x2e, 0x70, 0x72,
-	0x6f, 0x74, 0x6f, 0x12, 0x05, 0x6e, 0x6f, 0x77, 0x69, 0x6e, 0x1a, 0x1f, 0x67, 0x6f, 0x6f, 0x67,
-	0x6c, 0x65, 0x2f, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x75, 0x66, 0x2f, 0x74, 0x69, 0x6d, 0x65,
-	0x73, 0x74, 0x61, 0x6d, 0x70, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x22, 0x5c, 0x0a, 0x28, 0x41,
-	0x75, 0x74, 0x68, 0x6f, 0x72, 0x69, 0x7a, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x43, 0x6f, 0x6d, 0x6d,
-	0x61, 0x6e, 0x64, 0x41, 0x75, 0x74, 0x68, 0x6f, 0x72, 0x69, 0x7a, 0x65, 0x48, 0x6f, 0x73, 0x74,
-	0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x14, 0x0a, 0x05, 0x65, 0x6d, 0x61, 0x69, 0x6c,
-	0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x05, 0x65, 0x6d, 0x61, 0x69, 0x6c, 0x12, 0x1a, 0x0a,
-	0x08, 0x70, 0x61, 0x73, 0x73, 0x77, 0x6f, 0x72, 0x64, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52,
-	0x08, 0x70, 0x61, 0x73, 0x73, 0x77, 0x6f, 0x72, 0x64, 0x22, 0xbb, 0x01, 0x0a, 0x29, 0x41, 0x75,
+	0x6f, 0x74, 0x6f, 0x12, 0x05, 0x6e, 0x6f, 0x77, 0x69, 0x6e, 0x22, 0x58, 0x0a, 0x24, 0x41, 0x75,
 	0x74, 0x68, 0x6f, 0x72, 0x69, 0x7a, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x43, 0x6f, 0x6d, 0x6d, 0x61,
-	0x6e, 0x64, 0x41, 0x75, 0x74, 0x68, 0x6f, 0x72, 0x69, 0x7a, 0x65, 0x48, 0x6f, 0x73, 0x74, 0x52,
-	0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x1a, 0x0a, 0x08, 0x6a, 0x77, 0x74, 0x54, 0x6f,
-	0x6b, 0x65, 0x6e, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x6a, 0x77, 0x74, 0x54, 0x6f,
-	0x6b, 0x65, 0x6e, 0x12, 0x1a, 0x0a, 0x08, 0x6c, 0x61, 0x73, 0x74, 0x4e, 0x61, 0x6d, 0x65, 0x18,
-	0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x6c, 0x61, 0x73, 0x74, 0x4e, 0x61, 0x6d, 0x65, 0x12,
-	0x1c, 0x0a, 0x09, 0x66, 0x69, 0x72, 0x73, 0x74, 0x4e, 0x61, 0x6d, 0x65, 0x18, 0x03, 0x20, 0x01,
-	0x28, 0x09, 0x52, 0x09, 0x66, 0x69, 0x72, 0x73, 0x74, 0x4e, 0x61, 0x6d, 0x65, 0x12, 0x38, 0x0a,
-	0x09, 0x65, 0x78, 0x70, 0x69, 0x72, 0x65, 0x64, 0x41, 0x74, 0x18, 0x04, 0x20, 0x01, 0x28, 0x0b,
-	0x32, 0x1a, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x62,
-	0x75, 0x66, 0x2e, 0x54, 0x69, 0x6d, 0x65, 0x73, 0x74, 0x61, 0x6d, 0x70, 0x52, 0x09, 0x65, 0x78,
-	0x70, 0x69, 0x72, 0x65, 0x64, 0x41, 0x74, 0x32, 0x93, 0x01, 0x0a, 0x1b, 0x41, 0x75, 0x74, 0x68,
-	0x6f, 0x72, 0x69, 0x7a, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64,
-	0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x12, 0x74, 0x0a, 0x0d, 0x41, 0x75, 0x74, 0x68, 0x6f,
-	0x72, 0x69, 0x7a, 0x65, 0x48, 0x6f, 0x73, 0x74, 0x12, 0x2f, 0x2e, 0x6e, 0x6f, 0x77, 0x69, 0x6e,
-	0x2e, 0x41, 0x75, 0x74, 0x68, 0x6f, 0x72, 0x69, 0x7a, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x43, 0x6f,
-	0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x41, 0x75, 0x74, 0x68, 0x6f, 0x72, 0x69, 0x7a, 0x65, 0x48, 0x6f,
-	0x73, 0x74, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x30, 0x2e, 0x6e, 0x6f, 0x77, 0x69,
-	0x6e, 0x2e, 0x41, 0x75, 0x74, 0x68, 0x6f, 0x72, 0x69, 0x7a, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x43,
-	0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x41, 0x75, 0x74, 0x68, 0x6f, 0x72, 0x69, 0x7a, 0x65, 0x48,
-	0x6f, 0x73, 0x74, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x42, 0x2e, 0x5a,
+	0x6e, 0x64, 0x41, 0x75, 0x74, 0x68, 0x6f, 0x72, 0x69, 0x7a, 0x65, 0x52, 0x65, 0x71, 0x75, 0x65,
+	0x73, 0x74, 0x12, 0x14, 0x0a, 0x05, 0x65, 0x6d, 0x61, 0x69, 0x6c, 0x18, 0x01, 0x20, 0x01, 0x28,
+	0x09, 0x52, 0x05, 0x65, 0x6d, 0x61, 0x69, 0x6c, 0x12, 0x1a, 0x0a, 0x08, 0x70, 0x61, 0x73, 0x73,
+	0x77, 0x6f, 0x72, 0x64, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x70, 0x61, 0x73, 0x73,
+	0x77, 0x6f, 0x72, 0x64, 0x22, 0x7d, 0x0a, 0x25, 0x41, 0x75, 0x74, 0x68, 0x6f, 0x72, 0x69, 0x7a,
+	0x61, 0x74, 0x69, 0x6f, 0x6e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x41, 0x75, 0x74, 0x68,
+	0x6f, 0x72, 0x69, 0x7a, 0x65, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x1a, 0x0a,
+	0x08, 0x6a, 0x77, 0x74, 0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52,
+	0x08, 0x6a, 0x77, 0x74, 0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x12, 0x1a, 0x0a, 0x08, 0x6c, 0x61, 0x73,
+	0x74, 0x4e, 0x61, 0x6d, 0x65, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x6c, 0x61, 0x73,
+	0x74, 0x4e, 0x61, 0x6d, 0x65, 0x12, 0x1c, 0x0a, 0x09, 0x66, 0x69, 0x72, 0x73, 0x74, 0x4e, 0x61,
+	0x6d, 0x65, 0x18, 0x03, 0x20, 0x01, 0x28, 0x09, 0x52, 0x09, 0x66, 0x69, 0x72, 0x73, 0x74, 0x4e,
+	0x61, 0x6d, 0x65, 0x32, 0x87, 0x01, 0x0a, 0x1b, 0x41, 0x75, 0x74, 0x68, 0x6f, 0x72, 0x69, 0x7a,
+	0x61, 0x74, 0x69, 0x6f, 0x6e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x53, 0x65, 0x72, 0x76,
+	0x69, 0x63, 0x65, 0x12, 0x68, 0x0a, 0x09, 0x41, 0x75, 0x74, 0x68, 0x6f, 0x72, 0x69, 0x7a, 0x65,
+	0x12, 0x2b, 0x2e, 0x6e, 0x6f, 0x77, 0x69, 0x6e, 0x2e, 0x41, 0x75, 0x74, 0x68, 0x6f, 0x72, 0x69,
+	0x7a, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x41, 0x75, 0x74,
+	0x68, 0x6f, 0x72, 0x69, 0x7a, 0x65, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x2c, 0x2e,
+	0x6e, 0x6f, 0x77, 0x69, 0x6e, 0x2e, 0x41, 0x75, 0x74, 0x68, 0x6f, 0x72, 0x69, 0x7a, 0x61, 0x74,
+	0x69, 0x6f, 0x6e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x41, 0x75, 0x74, 0x68, 0x6f, 0x72,
+	0x69, 0x7a, 0x65, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x42, 0x2e, 0x5a,
 	0x2c, 0x67, 0x69, 0x74, 0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x73, 0x6f, 0x66, 0x74,
 	0x69, 0x61, 0x2d, 0x69, 0x6e, 0x63, 0x2f, 0x6e, 0x6f, 0x77, 0x69, 0x6e, 0x2d, 0x64, 0x65, 0x66,
 	0x69, 0x6e, 0x69, 0x74, 0x69, 0x6f, 0x6e, 0x3b, 0x6e, 0x6f, 0x77, 0x69, 0x6e, 0x62, 0x06, 0x70,
@@ -206,19 +190,17 @@ func file_authorizationCommandService_proto_rawDescGZIP() []byte {
 
 var file_authorizationCommandService_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_authorizationCommandService_proto_goTypes = []interface{}{
-	(*AuthorizationCommandAuthorizeHostRequest)(nil),  // 0: nowin.AuthorizationCommandAuthorizeHostRequest
-	(*AuthorizationCommandAuthorizeHostResponse)(nil), // 1: nowin.AuthorizationCommandAuthorizeHostResponse
-	(*timestamppb.Timestamp)(nil),                     // 2: google.protobuf.Timestamp
+	(*AuthorizationCommandAuthorizeRequest)(nil),  // 0: nowin.AuthorizationCommandAuthorizeRequest
+	(*AuthorizationCommandAuthorizeResponse)(nil), // 1: nowin.AuthorizationCommandAuthorizeResponse
 }
 var file_authorizationCommandService_proto_depIdxs = []int32{
-	2, // 0: nowin.AuthorizationCommandAuthorizeHostResponse.expiredAt:type_name -> google.protobuf.Timestamp
-	0, // 1: nowin.AuthorizationCommandService.AuthorizeHost:input_type -> nowin.AuthorizationCommandAuthorizeHostRequest
-	1, // 2: nowin.AuthorizationCommandService.AuthorizeHost:output_type -> nowin.AuthorizationCommandAuthorizeHostResponse
-	2, // [2:3] is the sub-list for method output_type
-	1, // [1:2] is the sub-list for method input_type
-	1, // [1:1] is the sub-list for extension type_name
-	1, // [1:1] is the sub-list for extension extendee
-	0, // [0:1] is the sub-list for field type_name
+	0, // 0: nowin.AuthorizationCommandService.Authorize:input_type -> nowin.AuthorizationCommandAuthorizeRequest
+	1, // 1: nowin.AuthorizationCommandService.Authorize:output_type -> nowin.AuthorizationCommandAuthorizeResponse
+	1, // [1:2] is the sub-list for method output_type
+	0, // [0:1] is the sub-list for method input_type
+	0, // [0:0] is the sub-list for extension type_name
+	0, // [0:0] is the sub-list for extension extendee
+	0, // [0:0] is the sub-list for field type_name
 }
 
 func init() { file_authorizationCommandService_proto_init() }
@@ -228,7 +210,7 @@ func file_authorizationCommandService_proto_init() {
 	}
 	if !protoimpl.UnsafeEnabled {
 		file_authorizationCommandService_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*AuthorizationCommandAuthorizeHostRequest); i {
+			switch v := v.(*AuthorizationCommandAuthorizeRequest); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -240,7 +222,7 @@ func file_authorizationCommandService_proto_init() {
 			}
 		}
 		file_authorizationCommandService_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*AuthorizationCommandAuthorizeHostResponse); i {
+			switch v := v.(*AuthorizationCommandAuthorizeResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -284,7 +266,7 @@ const _ = grpc.SupportPackageIsVersion6
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
 type AuthorizationCommandServiceClient interface {
-	AuthorizeHost(ctx context.Context, in *AuthorizationCommandAuthorizeHostRequest, opts ...grpc.CallOption) (*AuthorizationCommandAuthorizeHostResponse, error)
+	Authorize(ctx context.Context, in *AuthorizationCommandAuthorizeRequest, opts ...grpc.CallOption) (*AuthorizationCommandAuthorizeResponse, error)
 }
 
 type authorizationCommandServiceClient struct {
@@ -295,9 +277,9 @@ func NewAuthorizationCommandServiceClient(cc grpc.ClientConnInterface) Authoriza
 	return &authorizationCommandServiceClient{cc}
 }
 
-func (c *authorizationCommandServiceClient) AuthorizeHost(ctx context.Context, in *AuthorizationCommandAuthorizeHostRequest, opts ...grpc.CallOption) (*AuthorizationCommandAuthorizeHostResponse, error) {
-	out := new(AuthorizationCommandAuthorizeHostResponse)
-	err := c.cc.Invoke(ctx, "/nowin.AuthorizationCommandService/AuthorizeHost", in, out, opts...)
+func (c *authorizationCommandServiceClient) Authorize(ctx context.Context, in *AuthorizationCommandAuthorizeRequest, opts ...grpc.CallOption) (*AuthorizationCommandAuthorizeResponse, error) {
+	out := new(AuthorizationCommandAuthorizeResponse)
+	err := c.cc.Invoke(ctx, "/nowin.AuthorizationCommandService/Authorize", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -306,35 +288,35 @@ func (c *authorizationCommandServiceClient) AuthorizeHost(ctx context.Context, i
 
 // AuthorizationCommandServiceServer is the server API for AuthorizationCommandService service.
 type AuthorizationCommandServiceServer interface {
-	AuthorizeHost(context.Context, *AuthorizationCommandAuthorizeHostRequest) (*AuthorizationCommandAuthorizeHostResponse, error)
+	Authorize(context.Context, *AuthorizationCommandAuthorizeRequest) (*AuthorizationCommandAuthorizeResponse, error)
 }
 
 // UnimplementedAuthorizationCommandServiceServer can be embedded to have forward compatible implementations.
 type UnimplementedAuthorizationCommandServiceServer struct {
 }
 
-func (*UnimplementedAuthorizationCommandServiceServer) AuthorizeHost(context.Context, *AuthorizationCommandAuthorizeHostRequest) (*AuthorizationCommandAuthorizeHostResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method AuthorizeHost not implemented")
+func (*UnimplementedAuthorizationCommandServiceServer) Authorize(context.Context, *AuthorizationCommandAuthorizeRequest) (*AuthorizationCommandAuthorizeResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method Authorize not implemented")
 }
 
 func RegisterAuthorizationCommandServiceServer(s *grpc.Server, srv AuthorizationCommandServiceServer) {
 	s.RegisterService(&_AuthorizationCommandService_serviceDesc, srv)
 }
 
-func _AuthorizationCommandService_AuthorizeHost_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(AuthorizationCommandAuthorizeHostRequest)
+func _AuthorizationCommandService_Authorize_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(AuthorizationCommandAuthorizeRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(AuthorizationCommandServiceServer).AuthorizeHost(ctx, in)
+		return srv.(AuthorizationCommandServiceServer).Authorize(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/nowin.AuthorizationCommandService/AuthorizeHost",
+		FullMethod: "/nowin.AuthorizationCommandService/Authorize",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(AuthorizationCommandServiceServer).AuthorizeHost(ctx, req.(*AuthorizationCommandAuthorizeHostRequest))
+		return srv.(AuthorizationCommandServiceServer).Authorize(ctx, req.(*AuthorizationCommandAuthorizeRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -344,8 +326,8 @@ var _AuthorizationCommandService_serviceDesc = grpc.ServiceDesc{
 	HandlerType: (*AuthorizationCommandServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
-			MethodName: "AuthorizeHost",
-			Handler:    _AuthorizationCommandService_AuthorizeHost_Handler,
+			MethodName: "Authorize",
+			Handler:    _AuthorizationCommandService_Authorize_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
