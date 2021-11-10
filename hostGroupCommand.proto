@@ -4,8 +4,6 @@ option go_package="github.com/softia-inc/nowin-definition;nowin";
 
 service HostGroupCommandService {
   rpc Create(HostGroupCommandCreateRequest) returns (HostGroupCommandCreateResponse) {}
-  rpc Update(HostGroupCommandUpdateRequest) returns (HostGroupCommandUpdateResponse) {}
-  rpc Delete(HostGroupCommandDeleteRequest) returns (HostGroupCommandDeleteResponse) {}
 }
 message HostGroupCommandCreateRequest{
   string hostGroupName = 1;
@@ -17,23 +15,4 @@ message HostGroupCommandCreateRequest{
   string telephoneNumber3 = 7;
   string email = 8;
 }
-message HostGroupCommandCreateResponse {
-  string hostGroupUUID = 1;
-}
-message HostGroupCommandUpdateRequest{
-  string hostGroupUUID = 1;
-  string hostGroupName = 2;
-  string homePageURL = 3;
-  string address = 4;
-  bool is_enterprise = 5;
-  string telephoneNumber1 = 6;
-  string telephoneNumber2 = 7;
-  string telephoneNumber3 = 8;
-  string email = 9;
-}
-message HostGroupCommandUpdateResponse {
-}
-message HostGroupCommandDeleteRequest{
-  string hostGroupUUID = 1;
-}
-message HostGroupCommandDeleteResponse {}
+message HostGroupCommandCreateResponse {}
