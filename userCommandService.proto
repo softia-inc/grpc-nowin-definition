@@ -1,0 +1,30 @@
+syntax = "proto3";
+package nowin;
+option go_package="github.com/softia-inc/nowin-definition;nowin";
+
+service UserCommandService {
+  rpc Create(UserCommandCreateRequest) returns (UserCommandCreateResponse) {}
+  rpc Update(UserCommandUpdateRequest) returns (UserCommandUpdateResponse) {}
+  rpc Delete(UserCommandDeleteRequest) returns (UserCommandDeleteResponse) {}
+}
+message UserCommandCreateRequest{
+  string email = 1;
+  string firstName = 2;
+  string lastName = 3;
+  string password = 4;
+}
+message UserCommandCreateResponse {
+  string token =1;
+}
+message UserCommandUpdateRequest{
+  string userUUID = 1;
+  string email = 2;
+  string firstName = 3;
+  string lastName = 4;
+  string password = 5;
+}
+message UserCommandUpdateResponse {}
+message UserCommandDeleteRequest{
+  string userUUID = 1;
+}
+message UserCommandDeleteResponse {}

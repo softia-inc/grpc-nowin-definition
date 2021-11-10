@@ -16,9 +16,6 @@ message HostGroupCommandCreateRequest{
   string telephoneNumber2 = 6;
   string telephoneNumber3 = 7;
   string email = 8;
-  string firstName = 9;
-  string lastName = 10;
-  string password = 11;
 }
 message HostGroupCommandCreateResponse {
   string hostGroupUUID = 1;
