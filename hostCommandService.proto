@@ -3,7 +3,7 @@ package nowin;
 option go_package="github.com/softia-inc/nowin-definition;nowin";
 
 service HostCommandService {
-  rpc Create(HostCommandCreateFirstRequest) returns (HostCommandCreateFirstResponse) {}
+  rpc CreateFirst(HostCommandCreateFirstRequest) returns (HostCommandCreateFirstResponse) {}
 }
 message HostCommandCreateFirstRequest{
   string hostGroupUUID = 1;
