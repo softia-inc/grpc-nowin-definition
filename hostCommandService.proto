@@ -12,4 +12,9 @@ message HostCommandCreateFirstRequest{
   string lastName = 4;
   string password = 5;
 }
-message HostCommandCreateFirstResponse {}
+message HostCommandCreateFirstResponse {
+  string jwtToken = 1;
+  string email = 2;
+  string firstName = 3;
+  string lastName = 4;
+}

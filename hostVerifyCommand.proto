@@ -1,0 +1,13 @@
+syntax = "proto3";
+package nowin;
+option go_package="github.com/softia-inc/nowin-definition;nowin";
+
+service HostGroupVerifyCommandService {
+  rpc VerifyByEmail(HostGroupVerifyCommandVerifyByEmailRequest) returns (HostGroupVerifyCommandVerifyByEmailResponse) {}
+}
+message HostGroupVerifyCommandVerifyByEmailRequest{
+  string token = 1;
+}
+message HostGroupVerifyCommandVerifyByEmailResponse {
+  string hostGroupUUID = 1;
+}
