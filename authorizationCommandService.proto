@@ -1,7 +1,6 @@
 syntax = "proto3";
 package nowin;
 option go_package="github.com/softia-inc/nowin-definition;nowin";
-import "google/protobuf/timestamp.proto";
 
 service AuthorizationCommandService {
   rpc AuthorizeHost(AuthorizationCommandAuthorizeHostRequest) returns (AuthorizationCommandAuthorizeHostResponse) {}
@@ -14,5 +13,5 @@ message AuthorizationCommandAuthorizeHostResponse {
   string jwtToken = 1;
   string lastName = 2;
   string firstName = 3;
-  google.protobuf.Timestamp expiredAt = 4;
+  string email = 4;
 }
